@@ -149,7 +149,9 @@ Ethical and Legal Risks: Autonomous driving technology involves ethical and lega
 近年来，大型语言模型（LLMs）在自然语言处理领域取得显著成就，展现出强大的推理、解释和记忆能力，为自动驾驶领域提供了新的思路。LLMs特别擅长处理分布外（OOD）推理、常识理解和知识检索，这些能力可以为自动驾驶系统提供类似人类的决策支持。因此，本研究的目标是探索和开发一种融合大型语言模型的自动驾驶决策算法，以提升系统在复杂路况下的适应性和智能化水平。
 
 利用LLMs辅助自动驾驶已有一些研究。Chen等人引入了一种新颖的对象级多模态LLM架构，该架构结合了向量化的数值模态和预训练的LLM，以增强驾驶情境中的上下文理解。这项研究展示了LLM-driver在解释驾驶场景、回答问题和决策方面的熟练程度，突显了基于LLM的驾驶行为生成与传统行为克隆相比的潜力【1】。Fu等人探讨了使用LLM以类似人类的方式理解驾驶环境的可能性，并分析了LLM在处理复杂场景时的推理、解释和记忆能力。该研究确定了AD系统所需的三个关键能力：推理、解释和记忆，并通过构建闭环系统来展示LLM在驾驶场景中的理解和环境互动能力【2】。Sha等人研究了现有基于学习的AD系统在理解高级信息、泛化到罕见事件以及提供可解释性方面的挑战。该工作采用LLM作为复杂AD场景的决策组件，设计了认知路径，使LLM能够进行全面推理，并开发了将LLM决策转化为可执行驾驶命令的算法。这种方法使LLM的决策与PID控制器无缝集成，通过引导参数矩阵适应。这项研究是利用LLM作为复杂AD场景中有效决策者的初步尝试，从安全性、效率、泛化性和互操作性方面进行了考虑【3】。
-
+【1】	Chen L, Sinavski O, Hünermann J, et al. Driving with llms: Fusing object-level vector modality for explainable autonomous driving[J]. arXiv preprint arXiv:2310.01957, 2023.
+【2】	Fu D, Li X, Wen L, et al. Drive like a human: Rethinking autonomous driving with large language models[J]. arXiv preprint arXiv:2307.07162, 2023.
+【3】	Sha H, Mu Y, Jiang Y, et al. Languagempc: Large language models as decision makers for autonomous driving[J]. arXiv preprint arXiv:2310.03026, 2023.
 
 #### 二、课题目标
 课题拟达到的目标、成果的呈现形式或目标的评价方式等。（不超过500字）
