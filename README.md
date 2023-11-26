@@ -1,4 +1,40 @@
 # LLMBasedAutonomousDriving
+
+## Open Source Proposal for Autonomous Driving Research Based on Large Models. Contact for collaboration.
+
+### Part One: Project Overview
+
+#### I. Research Background and Main Content
+
+Briefly introduce the research problem or engineering task, including the current status and future expectations of research both domestically and internationally. (Not exceeding 1000 words)
+
+Project Name: Research on Multi-Agent Autonomous Driving Decision Algorithm Based on Large Language Models
+
+With the rapid advancement of autonomous driving technology, making accurate and efficient decisions in variable road conditions has become a major challenge. Currently, the capability of autonomous driving systems in complex conditions still needs improvement, especially in adaptability and decision-making when dealing with rare or unforeseen events. Traditional autonomous driving systems, based on optimization and modular design, are limited in performance in complex long-tail scenarios, mainly due to their lack of human-like reasoning abilities and experiential knowledge.
+
+In recent years, large language models (LLMs) have achieved significant accomplishments in the field of natural language processing, demonstrating powerful reasoning, interpretation, and memory capabilities, providing new perspectives for the field of autonomous driving. LLMs are particularly adept at handling out-of-distribution (OOD) reasoning, common-sense understanding, and knowledge retrieval. These abilities can provide human-like decision support for autonomous driving systems. Therefore, the goal of this research is to explore and develop an autonomous driving decision algorithm that integrates large language models to enhance the system's adaptability and intelligence in complex road conditions.
+
+There has been some research on using LLMs to assist autonomous driving. Chen et al. introduced a novel object-level multimodal LLM architecture that combines vectorized numerical modalities and pre-trained LLMs to enhance context understanding in driving situations. This research demonstrated the proficiency of LLM-driver in interpreting driving scenarios, answering questions, and making decisions, highlighting the potential of LLM-based driving behavior generation compared to traditional behavior cloning【1】. Fu et al. explored the possibility of using LLMs to understand driving environments in a human-like manner, analyzing the reasoning, interpretation, and memory capabilities of LLMs in handling complex scenarios. The study identified the three key abilities required by AD systems: reasoning, interpretation, and memory, and demonstrated LLM's understanding and interaction with the environment in driving scenarios through a closed-loop system【2】. Sha et al. researched the challenges of existing learning-based AD systems in understanding high-level information, generalizing to rare events, and providing interpretability. The work used LLM as a decision-making component for complex AD scenarios, designed a cognitive pathway to enable comprehensive reasoning by LLM, and developed algorithms to translate LLM decisions into executable driving commands. This approach seamlessly integrated LLM decision-making with PID controllers by guiding parameter matrices. This study was a preliminary attempt to use LLM as an effective decision-maker in complex AD scenarios, considering safety, efficiency, generalizability, and interoperability【3】.
+
+【1】 Chen L, Sinavski O, Hünermann J, et al. Driving with llms: Fusing object-level vector modality for explainable autonomous driving[J]. arXiv preprint arXiv:2310.01957, 2023.
+
+【2】 Fu D, Li X, Wen L, et al. Drive like a human: Rethinking autonomous driving with large language models[J]. arXiv preprint arXiv:2307.07162, 2023.
+
+【3】 Sha H, Mu Y, Jiang Y, et al. Languagempc: Large language models as decision makers for autonomous driving[J]. arXiv preprint arXiv:2310.03026, 2023.
+
+#### II. Project Objectives
+The goals to be achieved, presentation of outcomes, or methods of evaluating objectives. (Not exceeding 500 words)
+
+This project aims to develop and validate a multi-agent autonomous driving decision algorithm based on large language models (LLMs) to enhance decision-making capabilities and efficiency of autonomous driving systems in complex road conditions. Specific objectives are as follows:
+
+2.1 Build and optimize code dataset: Develop a large-scale autonomous driving scenario dataset that includes various complex road conditions (urban, highway, rural, etc.). The dataset will include high-quality control commands, environmental perception data, and corresponding language descriptions to support multimodal learning and algorithm validation.
+
+2.2 Open-source code and models: To facilitate further research and application in academia and industry, we will release the developed algorithms and models as open-source code. This will include complete code for data preprocessing, model training, evaluation, and application.
+
+2.3 Multimodal data fusion: Research and implement an effective multimodal fusion method that combines LLMs with visual, radar, and other perception data in autonomous driving systems to improve the model's understanding and adaptability to complex driving environments.
+
+2.4 Develop multi-agent autonomous driving decision algorithm: Design and implement a novel multi-agent autonomous driving decision algorithm based on LLMs. The algorithm will
+
 ## 开源一份基于大模型的自动驾驶研究计划书，有意合作请联系
            
  
@@ -21,6 +57,119 @@
 【2】	Fu D, Li X, Wen L, et al. Drive like a human: Rethinking autonomous driving with large language models[J]. arXiv preprint arXiv:2307.07162, 2023.
 
 【3】	Sha H, Mu Y, Jiang Y, et al. Languagempc: Large language models as decision makers for autonomous driving[J]. arXiv preprint arXiv:2310.03026, 2023.
+
+II. Research Objectives
+The intended goals of the project, the form of presentation of the results, or the method of evaluating the objectives. (Not exceeding 500 words)
+
+This project aims to develop and validate a multi-agent autonomous driving decision algorithm based on Large Language Models (LLMs), to enhance the decision-making ability and efficiency of autonomous driving systems in complex road conditions. The specific objectives are as follows:
+
+2.1 Building and Optimizing Code Dataset: Develop a large-scale autonomous driving scenario dataset that includes various complex road conditions (urban, highway, rural, etc.). The dataset will include high-quality control commands, environmental perception data, and corresponding language descriptions to support multimodal learning and algorithm validation.
+
+2.2 Open Source Code and Models: To promote further research and application in academia and industry, we will release the developed algorithms and models as open-source code. This will include complete code for data preprocessing, model training, evaluation, and application.
+
+2.3 Multimodal Data Fusion: Research and implement an effective multimodal fusion method, combining LLMs with visual, radar, and other perception data in autonomous driving systems, to enhance the model's understanding and adaptability to complex driving environments.
+
+2.4 Developing Multi-Agent Autonomous Driving Decision Algorithms: Design and implement a novel multi-agent autonomous driving decision algorithm based on LLMs. This algorithm will be able to handle complex traffic scenarios, including urban congestion, multi-vehicle interaction, etc., providing efficient and accurate driving decisions.
+
+2.5 Evaluating the Effectiveness of the Autonomous Driving Model: Through a series of experiments and simulation tests, evaluate the performance of the developed algorithm under various road conditions. Especially in handling long-tail events and rare situations, as well as in multi-vehicle interactions and complex traffic environments.
+
+III. Proposed Research Methods
+Feasibility and advancement analysis of the research methods or technical routes. (Not exceeding 500 words)
+
+The project proposes to use Large Language Models (LLM) as one modality of autonomous driving agents and to train autonomous driving strategies based on Multi-Agent Reinforcement Learning (MARL).
+
+3.1 Multimodal Data Processing and LLM Integration Module
+
+The goal of this module is to convert visual, radar, and other multimodal data into a format that can be understood and processed by LLMs, in order to generate useful information and suggestions for autonomous driving. We plan to use deep learning models (such as Convolutional Neural Networks (CNN) for image data, Recurrent Neural Networks (RNN) for time-series data) to extract features from visual and radar data for multimodal data preprocessing. These features will be integrated by LLMs into textual information. Based on its understanding of human knowledge and language, LLMs can provide in-depth analysis of the scene, such as descriptions and suggestions on traffic conditions, potential dangers, environmental changes, etc. The combined text, image, radar, and other data are then input to the autonomous driving agent for driving strategy output.
+
+3.2 Multi-Agent Reinforcement Learning (MARL) Driving Strategy Training Module
+
+This module utilizes multi-agent reinforcement learning to train autonomous driving strategies, enabling agents to make effective driving decisions in complex traffic environments. We plan to deploy multiple LLM-based reinforcement learning agents in a simulation environment. Through the interaction between multiple agents, they can learn how to execute driving decisions in the presence of complex road conditions (such as other vehicles, pedestrians).
+This approach combines the advanced language understanding capabilities of LLMs with the decision-making ability of reinforcement learning in complex environments, providing an innovative solution for autonomous driving. Through this method, we can expect the agents to demonstrate higher intelligent decision-making abilities and safety when dealing with complex road situations and interactions.
+
+IV. Main Expected Innovations
+No more than three innovation points, with a description of each. (Not exceeding 500 words)
+
+Integration of Large Language Models in Autonomous Driving Decision-Making: This project aims to be one of the first to integrate LLMs into autonomous driving decision-making processes. By leveraging the advanced reasoning, interpretation, and memory capabilities of LLMs, the project seeks to enhance the adaptability and intelligence of autonomous driving systems in complex road conditions. This integration represents a significant innovation in the field of autonomous driving, potentially leading to more human-like decision-making abilities in autonomous vehicles.
+
+Development of Multi-Agent Autonomous Driving Decision Algorithms: The project proposes the development of a novel multi-agent autonomous driving decision algorithm based on LLMs. This algorithm is designed to handle complex traffic scenarios, including urban congestion and multi-vehicle interaction, providing efficient and accurate driving decisions. The use of multi-agent reinforcement learning in conjunction with LLMs is a novel approach that could significantly improve the performance of autonomous driving systems in complex environments.
+
+Effective Multimodal Data Fusion Method: The project aims to develop an effective multimodal data fusion method that combines LLMs with visual, radar, and other perception data in autonomous driving systems. This method is expected to enhance the model's understanding and adaptability to complex driving environments, representing a significant advancement in the field of autonomous driving technology.
+
+V. Research Team Composition and Division of Labor
+The composition of the research team, including the number of people, professional titles, and division of labor. (Not exceeding 500 words)
+
+The research team will consist of experts in the fields of artificial intelligence, autonomous driving, and large language models. The team will be divided into several groups, each responsible for different aspects of the project:
+
+Data Collection and Preprocessing Group: This group will be responsible for developing the autonomous driving scenario dataset, including data collection, preprocessing, and annotation. The team members in this group will have expertise in data engineering and autonomous driving.
+
+Model Development and Training Group: This group will focus on the development and training of the autonomous driving decision algorithm based on LLMs. The members will have strong backgrounds in machine learning, deep learning, and natural language processing.
+
+Simulation and Testing Group: This group will be responsible for conducting simulation tests and evaluating the performance of the developed algorithm under various road conditions. The team members will have experience in simulation software and autonomous driving testing.
+
+Open Source Management Group: This group will manage the open-source release of the developed algorithms and models, including code documentation, version control, and community engagement. The members will have experience in software development and open-source project management.
+
+Each group will work closely together to ensure the successful completion of the project objectives.
+
+VI. Research Schedule and Milestones
+The main research tasks and expected completion time of each task. (Not exceeding 500 words)
+
+Q1-Q2, Year 1: Data Collection and Preprocessing
+
+Develop and optimize the autonomous driving scenario dataset.
+Complete data collection, preprocessing, and annotation.
+Q3, Year 1 - Q2, Year 2: Model Development and Training
+
+Develop and train the multi-agent autonomous driving decision algorithm based on LLMs.
+Implement multimodal data fusion methods.
+Q3, Year 2 - Q4, Year 2: Simulation and Testing
+
+Conduct simulation tests to evaluate the algorithm's performance.
+Refine and optimize the algorithm based on test results.
+Q1, Year 3: Open Source Release and Documentation
+
+Prepare and release the open-source code and models.
+Complete documentation and community engagement for the open-source project.
+Q2, Year 3: Final Evaluation and Reporting
+
+Conduct a final evaluation of the project.
+Prepare and submit the final project report.
+VII. Expected Research Outcomes
+The expected scientific and technological achievements, and their application prospects. (Not exceeding 500 words)
+
+The expected outcomes of this research include:
+
+A Novel Multi-Agent Autonomous Driving Decision Algorithm: The development of a new multi-agent autonomous driving decision algorithm based on LLMs, capable of handling complex traffic scenarios with improved decision-making abilities and efficiency.
+
+Advanced Multimodal Data Fusion Method: The establishment of an effective multimodal data fusion method that integrates LLMs with various perception data, enhancing the adaptability and intelligence of autonomous driving systems.
+
+Comprehensive Autonomous Driving Scenario Dataset: The creation of a large-scale, high-quality autonomous driving scenario dataset, which will be valuable for further research and development in the field.
+
+Open Source Code and Models: The release of open-source code and models will facilitate further research and application in academia and industry, promoting innovation and development in autonomous driving technology.
+
+Scientific Publications and Patents: The research is expected to lead to several high-quality scientific publications and potential patents, contributing to the advancement of knowledge in the field of autonomous driving and AI.
+
+Application Prospects: The research outcomes have significant application prospects in the development of more intelligent and adaptable autonomous driving systems, potentially leading to safer and more efficient transportation solutions.
+
+VIII. Budget and Funding Sources
+The total budget of the project and the sources of funding. (Not exceeding 500 words)
+
+The total budget for this project is estimated to be around $2 million, covering personnel costs, equipment and software, data collection and processing, simulation and testing, and other miscellaneous expenses. The funding sources for this project include government research grants, university funds, and industry partnerships. We will also seek additional funding opportunities through research collaborations and technology transfer agreements.
+
+IX. Risk Analysis and Contingency Plans
+Potential risks in the research process and corresponding contingency plans. (Not exceeding 500 words)
+
+Technical Risks: The integration of LLMs into autonomous driving decision-making is a novel approach and may encounter unforeseen technical challenges. To mitigate this risk, we will conduct thorough preliminary studies and maintain flexibility in our research approach, adapting our methods as needed.
+
+Data Collection and Quality Risks: High-quality data is crucial for the success of this project. We will ensure rigorous data collection and preprocessing methods and establish partnerships with relevant organizations for data sharing and validation.
+
+Funding Risks: There is a risk of insufficient funding to complete all aspects of the project. We will actively seek additional funding sources and prioritize key research tasks to ensure the most critical objectives are met.
+
+Team Coordination Risks: Effective coordination among different research groups is essential. We will establish clear communication channels and regular meetings to ensure smooth collaboration and progress tracking.
+
+Ethical and Legal Risks: Autonomous driving technology involves ethical and legal considerations. We will conduct our research in compliance with all relevant laws and ethical guidelines, and engage with legal experts as needed.
+
+
 
 #### 二、课题目标
 课题拟达到的目标、成果的呈现形式或目标的评价方式等。（不超过500字）
@@ -130,5 +279,3 @@
 3.遵守《中华人民共和国保守国家秘密法》和《科学技术保密规定》等相关法律法规；
 4.严守学术诚信。
 
-
-![image](https://github.com/TimHoustons/LLMBasedAutonomousDriving/assets/107018384/d07f728e-9cc4-4fc9-8938-78beb9c617cc)
